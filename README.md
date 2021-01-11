@@ -17,4 +17,4 @@ DISCORD_GUILD=<guild_id>
 
 ## Usage
 
-python main.py
+```python main.py```
