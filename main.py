@@ -33,7 +33,11 @@ async def on_voice_state_update(member, prev, cur):
     if str(member) == 'Obi-Wan Kenobi#7773':
         return
     try:
-        if prev.channel == cur.channel:
+        # Means we have left call
+        if cur is None:
+            return
+        # If coming from channel that isn't None check hasn't stayed in channel
+        if prev is not None and prev.channel == cur.channel:
             return
         print(f"Joining: {member.voice.channel}")
         voice = await member.voice.channel.connect()
