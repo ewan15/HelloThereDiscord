@@ -30,9 +30,11 @@ def loada2(state):
 
 @client.event
 async def on_voice_state_update(member, prev, cur):
-    if str(member) == 'HelloThere#7773':
+    if str(member) == 'Obi-Wan Kenobi#7773':
         return
     try:
+        if prev.channel == cur.channel:
+            return
         print(f"Joining: {member.voice.channel}")
         voice = await member.voice.channel.connect()
         voice.play(discord.FFmpegPCMAudio('obi-wan-hello-there.mp3'))
