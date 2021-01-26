@@ -36,8 +36,8 @@ async def on_message(message):
         voice_channel = message.author.voice.channel
         print(f"Joining: {voice_channel}")
         voice = await voice_channel.connect()
-        voice.play(discord.FFmpegPCMAudio('obi-wan-hello-there.mp3'))
-        await asyncio.sleep(2.5)
+        voice.play(discord.FFmpegPCMAudio('its-over-anakin.mp3'))
+        await asyncio.sleep(36)
         await voice.disconnect()
     except Exception as e:
         print(e)
