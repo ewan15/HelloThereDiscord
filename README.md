@@ -10,7 +10,7 @@
 
 You need to create a .env file in root as show in sample
 ```
-# .env
+# .env_token
 DISCORD_TOKEN=<token>
 DISCORD_GUILD=<guild_id>
 ```
